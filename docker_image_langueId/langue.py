@@ -29,12 +29,32 @@ def write_language_to_file(language, output_file):
         file.write(language)
 
 def main():
-    video_name = input("Entrez le chemin du fichier vidéo : ")
-    video_path = f"Input_videos/{video_name}"
+    #video_name = input("Entrez le chemin du fichier vidéo : ")
+    #video_path = f"../Pipeline_outpouts/{video_name}"
 
-    if not os.path.exists(video_path):
-        print("Erreur : fichier introuvable.")
+     # Chemin du dossier contenant les vidéos compressées
+    folder_path = "../Pipeline_outpouts"
+
+    # Liste tous les fichiers dans le dossier
+    files = os.listdir(folder_path)
+
+    # Filtrer les fichiers pour ne conserver que les vidéos
+    video_files = [file for file in files if file.endswith(".mp4")]
+
+    if len(video_files) == 1:
+        # Si une seule vidéo est trouvée, récupérer son nom
+        video_name = video_files[0]
+        video_path = os.path.join(folder_path, video_name)
+        print(f"La seule vidéo trouvée dans le dossier est : {video_path}")
+        
+        # Utilisez video_path comme vous le souhaitez dans votre code
+    elif len(video_files) == 0:
+        print("Aucune vidéo trouvée dans le dossier.")
         return
+    else:
+        print("Plusieurs vidéos trouvées dans le dossier. Impossible de déterminer laquelle choisir automatiquement.")
+
+    ######################## 
 
     audio_path = 'temp_audio.wav'
     extract_audio_from_video(video_path, audio_path)
@@ -47,7 +67,7 @@ def main():
         print(transcription)
         identified_language = identified_language[:2]
         # Écrire la langue identifiée dans un fichier
-        write_language_to_file(identified_language, 'langue.txt')
+        write_language_to_file(identified_language, '../Pipeline_outpouts/langue.txt')
         print("Langue identifiée écrite dans identified_language.txt.")
     else:
         print("Échec de l'identification de la langue.")

@@ -4,8 +4,8 @@
 read -p "Entrez le nom de la vidéo à compresser (sans extension) : " video_name
 
 # Chemin de la vidéo à compresser
-input_video="Input_videos/${video_name}"
-output_video="Pipeline_outpouts/${video_name}_compressed.mp4"
+input_video="../Input_videos/${video_name}"
+output_video="../Pipeline_outpouts/${video_name}_compressed.mp4"
 
 # Vérification de l'existence de la vidéo
 echo $input_video
