@@ -1,17 +1,11 @@
-#Image de base
 FROM ubuntu:latest
 
-#installation des outils nécessaires pour la compression
-RUN apt-get update && apt-get install ffmpeg -y
+# Installation de ffmpeg
+RUN apt-get update && apt-get install -y ffmpeg
 
+# Copie du script dans le conteneur
+COPY compress_video.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/compress_video.sh
 
-#Definition du repertoire de travail
-WORKDIR /app
-
-#Copie du script de compression de video dans le conteneur
-COPY /compress_video.sh /app/compress_video.sh
-RUN chmod +x /app/compress_video.sh
-
-
-#Commande pour lancer le script
-CMD [ "./compress_video.sh" ]
+# Définition du script comme point d'entrée
+ENTRYPOINT ["compress_video.sh"]
