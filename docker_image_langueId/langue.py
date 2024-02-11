@@ -33,7 +33,7 @@ def main():
     #video_path = f"../Pipeline_outpouts/{video_name}"
 
      # Chemin du dossier contenant les vidéos compressées
-    folder_path = "../Pipeline_outpouts"
+    folder_path = "../Pipeline_outputs"
 
     # Liste tous les fichiers dans le dossier
     files = os.listdir(folder_path)
@@ -67,8 +67,8 @@ def main():
         print(transcription)
         identified_language = identified_language[:2]
         # Écrire la langue identifiée dans un fichier
-        write_language_to_file(identified_language, '../Pipeline_outpouts/langue.txt')
-        print("Langue identifiée écrite dans identified_language.txt.")
+        write_language_to_file(identified_language, '/Pipeline_outputs/langue.txt')
+        print("Langue identifiée écrite dans langue.txt.")
     else:
         print("Échec de l'identification de la langue.")
 
