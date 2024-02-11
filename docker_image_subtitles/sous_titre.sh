@@ -7,7 +7,7 @@ if ! command -v autosrt &> /dev/null; then
 fi
 
 # Chemin du dossier contenant les vidéos compressées et le fichier de langue
-video_folder="../Pipeline_outpouts"
+video_folder="/Pipeline_outputs"
 lang_file="$video_folder/langue.txt"
 
 # Obtenir le nom de la seule vidéo présente dans le dossier

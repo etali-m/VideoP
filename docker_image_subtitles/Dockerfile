@@ -2,16 +2,14 @@
 FROM ubuntu:latest
 
 # Installation des dépendances nécessaires
-RUN apt-get update && apt-get install -y autosrt && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y python3-pip && apt-get install -y ffmpeg
 
-# Définir le répertoire de travail dans le conteneur
-WORKDIR /app
+# Installation de autosrt via pip
+RUN pip install autosrt
 
-# Copier le script Bash dans le conteneur
-COPY sous-titre.sh /app/
+# Copie du script dans le conteneur
+COPY sous_titre.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/sous_titre.sh 
 
-# Donner les droits d'exécution au script
-RUN chmod +x sous-titre.sh
-
-# Commande par défaut pour exécuter le script Bash
-CMD ["./sous-titre.sh"]
+# Définition du script comme point d'entrée
+ENTRYPOINT ["sous_titre.sh"]
