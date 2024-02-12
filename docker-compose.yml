@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  video_compressor:
+    image: video_compressor
+    volumes:
+      - /home/etali/Documents/Cours ENSPY/5MSI/Cloud computing/Proje Pipeline/VideoP/Input_videos:/Input_videos
+      - /home/etali/Documents/Cours ENSPY/5MSI/Cloud computing/Proje Pipeline/VideoP/Pipeline_outputs:/Pipeline_outputs
+    command: "${VIDEO_FILE}"
+
+  lang_identification:
+    image: lang_identification
+    volumes:
+      - /home/etali/Documents/Cours ENSPY/5MSI/Cloud computing/Proje Pipeline/VideoP/Pipeline_outputs:/Pipeline_outputs
+    depends_on:
+      video_compressor:
+        condition: service_completed_successfully
+
+
+  subtitle_generator:
+    image: subtitles
+    volumes:
+      - /home/etali/Documents/Cours ENSPY/5MSI/Cloud computing/Proje Pipeline/VideoP/Pipeline_outputs:/Pipeline_outputs
+    depends_on:
+      lang_identification:
+        condition: service_completed_successfully

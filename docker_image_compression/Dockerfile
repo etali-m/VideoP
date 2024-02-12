@@ -8,4 +8,4 @@ COPY compress_video.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/compress_video.sh
 
 # Définition du script comme point d'entrée
-ENTRYPOINT ["compress_video.sh"]
+ENTRYPOINT ["compress_video.sh"] 
