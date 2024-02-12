@@ -20,4 +20,4 @@ eg: `sudo docker run -it -v /chenmin vers la vidéo :/Pipeline_outputs subtitles
 2. Modifier la valeur de la variable d'environnement dans le fichier *.env* avec le nom de la vidéo à traiter
 eg : `VIDEO_FILE=test.mp4`
 3. Lancer la stack de conteneur pour le traitement avec la commande : `sudo docker compose up`
-4. Le résultat de la vidéo traité sera contenu dans le dossier .Pipeline_outputs.
+4. Le résultat de la vidéo traité sera contenu dans le dossier __Pipeline_outputs__
