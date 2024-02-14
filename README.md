@@ -27,7 +27,11 @@ eg : `VIDEO_FILE=test.mp4`
 4. Le résultat de la vidéo traité sera contenu dans le dossier **Pipeline_outputs**
 5. Pour uploader les données générer sur notre instance EC2 : lancer le script `./upload.sh`
 
+## Sur AWS
+Nous avons créer deux instances : 
+1. **Serv1_ubuntu** qui contient un serveur apache qui permet d'affichier la page web
+2. **Serv_agregation** qui contient un script bash qui permet d'agréger la vidéo et les sous-titre uploader dans l'instance puis les envoie dans notre bucket S3 comme présenter sur le shéma plus haut
 
-## Visualiser les vidéo sur la page web
+## Visualiser les vidéos sur la page web
 Rendez vous à l'adresse : [Vidéo agrégées](http://34.227.63.150/)
 
