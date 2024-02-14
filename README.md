@@ -5,7 +5,8 @@ Les vidéo sont stocké en local sur un ordinateur et doivent être traitées pa
 Les méta-données extraites et la vidéo compréssée sont ensuite agrégés par des VMs hébergés dans un cloud *AWS*
 Le résultat sera affiché sur une page web publiquement accéssible.
 
-![architecture pipeline]([chemin_vers_l'image_dans_le_repo](https://github.com/etali-m/VideoP/blob/main/VidP.drawio.png))
+![Texte alternatif](https://raw.githubusercontent.com/etali-m/VideoP/main/VidP.drawio.png)
+
 
 
 ## Exécuter le conteneur pour la compréssion de vidéo ?
