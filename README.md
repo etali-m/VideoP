@@ -25,3 +25,9 @@ eg: `sudo docker run -it -v /chenmin vers la vidéo :/Pipeline_outputs subtitles
 eg : `VIDEO_FILE=test.mp4`
 3. Lancer la stack de conteneur pour le traitement avec la commande : `sudo docker compose up`
 4. Le résultat de la vidéo traité sera contenu dans le dossier **Pipeline_outputs**
+5. Pour uploader les données générer sur notre instance EC2 : lancer le script `./upload.sh`
+
+
+## Visualiser les vidéo sur la page web
+Rendez vous à l'adresse : [Vidéo agrégées](http://34.227.63.150/)
+
