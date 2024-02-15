@@ -33,5 +33,5 @@ Nous avons créer deux instances :
 2. **Serv_agregation** qui contient un script bash qui permet d'agréger la vidéo et les sous-titre uploader dans l'instance puis les envoie dans notre bucket S3 comme présenter sur le shéma plus haut
 
 ## Visualiser les vidéos sur la page web
-Rendez vous à l'adresse : [Vidéo agrégées](http://34.227.63.150/)
+Rendez vous à l'adresse : [Vidéo agrégées](http://34.227.63.150/video.html)
 
