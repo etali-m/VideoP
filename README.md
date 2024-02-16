@@ -5,7 +5,7 @@ Les vidéo sont stocké en local sur un ordinateur et doivent être traitées pa
 Les méta-données extraites et la vidéo compréssée sont ensuite agrégés par des VMs hébergés dans un cloud *AWS*
 Le résultat sera affiché sur une page web publiquement accéssible.
 
-![Texte alternatif](https://raw.githubusercontent.com/etali-m/VideoP/main/VidP.drawio.png)
+![Texte alternatif](https://raw.githubusercontent.com/etali-m/VideoP/main/architecture.png)
 
 
 
